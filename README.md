@@ -1,6 +1,8 @@
 # pizza-restaurant
 A pizza restaurant website using html and css
+
 live:  https://krisha1205.github.io/pizza-web/
+
 At Kabir pizza, we blend traditional Italian flavors with a modern twist. Our pizzas are crafted using hand-stretched dough, slow-fermented for 48 hours, and cooked to perfection in a wood-fired oven. We use locally sourced vegetables and authentic Italian cheeses and meats.
 
 Our Specialties:
