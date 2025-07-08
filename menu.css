@@ -1,0 +1,184 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.overall{
+    background-color: rgb(63, 60, 60,0.7);
+    text-align: center;
+}
+
+.bar{
+    display: none;
+}
+
+.pizza{
+    color:white;
+    padding:100px 0px 30px 0px;
+
+}
+
+.pizza span{
+    display: inline-block;
+    animation: pizza 3s linear infinite alternate-reverse;
+    opacity: 0;
+}
+
+.pizza span:nth-child(1){
+    animation-delay: 1s;
+}
+
+.pizza span:nth-child(2){
+    animation-delay: 1.2s;
+}
+
+.pizza span:nth-child(3){
+    animation-delay: 1.4s;
+}
+
+.pizza span:nth-child(4){
+    animation-delay: 1.6s;
+}
+
+.pizza span:nth-child(5){
+    animation-delay: 1.8s;
+}
+
+.pizza span:nth-child(6){
+    animation-delay: 2s;
+}
+
+.pizza span:nth-child(7){
+    animation-delay: 2.2s;
+}
+
+.pizza span:nth-child(8){
+    animation-delay: 2.4s;
+}
+
+.pizza span:nth-child(9){
+    animation-delay: 2.6s;
+}
+
+@keyframes pizza {
+    0%{
+        opacity: 0;
+        transform: rotateY(90deg);
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.menu{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+    justify-content: center;
+    padding:30px 0px
+}
+
+.menu div{
+    width:400px ;
+    background-color: white;
+    padding:30px;
+}
+
+.box{
+    width: 100%;
+    position:fixed;
+    top:0px;
+    left: 0px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    padding: 15px 30px;
+    z-index: 100;
+
+}
+
+.sub-box{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.sub-box h3:hover{
+    color:red
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    color: white;
+}
+
+img{
+    width:300px;
+    margin: 30px 0px;
+    filter: grayscale(.4);
+    transition: 0.3s;
+}
+
+img:hover{
+    filter: grayscale(0);
+    transform: scale(1.1,1.1);
+}
+
+button{
+    padding: 7px 15px;
+    background-color: transparent;
+    border: 1px solid black;
+
+}
+
+button:hover{
+    background-color: black;
+    color: red;
+    border-radius: 30px;
+}
+
+@media  screen and (max-width:800px) {
+
+    .sub-box{
+        position: fixed;
+        background-color: red;
+        color: white;
+        top: 57px;
+        left: -100%;
+        height: 250px;
+        width: 25%;
+        flex-direction: column;
+        justify-content: start;
+        padding: 30px 0px;
+        transition: all 1s;
+    }
+
+    .bar1{
+        display: block;
+    }
+
+    #bar:checked~.sub-box{
+        left: 0%;
+    }
+
+    .menu{
+        grid-template-columns: auto;
+    }
+    
+}
+
+@media screen and (max-width:450px){
+    .menu div{
+        margin: auto;
+        width: 80%;
+    }
+
+    img{
+        width: 100%;
+    }
+}

@@ -1,0 +1,285 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.overall{
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(./giphy\ \(1\).gif);
+    background-size: cover;
+    height: 120vh;
+    position: relative;
+}
+
+.bar{
+    display: none;
+}
+
+.box{
+    width: 100%;
+    position:fixed;
+    top:0px;
+    left: 0px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    padding: 15px 30px;
+    z-index: 100;
+
+}
+
+.sub-box{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.sub-box h3:hover{
+    color:red
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    color: white;
+}
+
+.offer{
+    margin: auto;
+    position: absolute;
+    top:25%;
+    left:20%;
+    line-height: 80px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.quote{
+    font-size: 60px;
+    color: transparent;
+    background-image: linear-gradient(white,white);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -750px 0px;
+    animation: quote 4s linear infinite alternate;
+    
+}
+
+@keyframes quote{
+    100%{
+        background-position: 0 0;
+    }
+
+    
+
+}
+
+.offer1{
+    color:white
+}
+
+.offer1 h1:nth-child(1),.offer1 h2{
+    color:red
+}
+
+.box2{
+    text-align: center;
+}
+
+.box2 h1{
+    color:red;
+    font-size: 40px;
+    padding: 50px 0px;
+}
+
+.box2 p{
+    font-size: 19px;
+    width: 60%;
+    margin: auto;
+    line-height: 30px;
+}
+
+.box2 h2{
+    color:red;
+    padding:50px 0px ;
+    font-size: 26px;
+}
+
+
+.box3{
+    background-color: rgba(35, 34, 34,0.99);
+    padding: 50px 30px;
+
+}
+
+.box3 h1{
+    color:white;
+    padding:0px 0px 20px 0px;
+    animation-name: box3;
+    animation-duration: 3s;
+    animation-iteration-count: 10;
+}
+
+.coupon{
+    height:300px;
+    width:100%;
+}
+
+.coupon-img{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+    justify-content: center;
+    object-fit: cover;
+
+    
+}
+
+.coupon:hover{
+    transform: scale(0.9,0.9);
+    cursor:zoom-in;
+    box-shadow: 3px 3px 10px 5px white;
+    animation-name: coupon;
+}
+
+.box4{
+    padding:50px 30px 10px 30px
+}
+
+.box4 h1{
+    padding:10px 0px;
+    color:red;
+    animation-name: head;
+    animation-duration: 3s;
+    animation-iteration-count: 10;
+}
+
+.box4 h3{
+    padding:10px 0px 30px 0px;
+}
+
+.box4 span{
+    color:red;
+    font-size: 25px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.box5{
+    background-color: rgba(40, 38, 38,0.4);
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.box5 h1{
+    padding:70px 0px 10px 0px;
+    font-size: 40px;
+}
+
+.box5 h2{
+    padding:20px 0px
+}
+
+.box5 span{
+    color:red;
+    font-size: 35px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+
+.app{
+    width:400px;
+    height:300px
+}
+
+.box6{
+    padding:30px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.box6 h1{
+    padding:10px 0px;
+    color:red
+}
+
+.box6 h1:hover{
+    text-decoration: underline;
+}
+
+.box6 p{
+    line-height: 40px;
+    font-size: 20px;
+}
+
+.box6 i{
+    font-size: 30px;
+    padding:10px 5px
+}
+
+@media screen and  (max-width:800px) {
+
+    .sub-box{
+        position: fixed;
+        background-color: red;
+        color:black;
+        top: 57px;
+        left: -100%;
+        height: 250px;
+        width: 25%;
+        flex-direction: column;
+        justify-content: start;
+        padding: 30px 0px;
+        transition: all 1s;
+    }
+
+    .bar1{
+        display: block;
+    }
+
+    #bar:checked~.sub-box{
+        left: 0%;
+    }
+
+    .box6{
+        grid-template-columns: auto;
+        text-align: center;
+    }
+
+    .overall i{
+        display: inline;
+    }
+
+    .box5{
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .box5 img{
+        width:80%
+    }
+
+    .coupon-img{
+        grid-template-columns: auto auto;
+    }
+}
+
+
+
+@media screen and  (max-width:953px){
+    .overall{
+        height: 190vh;      
+    }
+} 
+
+@media  screen and (max-width:1030px) {
+    .box6{
+        gap: 5px;
+        text-align: center;
+    }
+    
+}
